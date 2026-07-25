@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A Mad Tea-Party Order Form</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>A Mad Tea-Party</h1>
+
+    <h2>Tea Party Supplies</h2>
+    <table>
+        <tr>
+            <td>Tea Cups with Saucers</td>
+            <td>$ 35.99</td>
+        </tr>
+        <tr>
+            <td>Tea Pot</td>
+            <td>$ 28.99</td>
+        </tr>
+        <tr>
+            <td>Serving Spoon Set</td>
+            <td>$ 10.99</td>
+        </tr>
+        <tr>
+            <td>Butter Dish</td>
+            <td>$ 12.99</td>
+        </tr>
+        <tr>
+            <td>Bread Knife</td>
+            <td>$ 29.99</td>
+        </tr>
+        <tr>
+            <td>Table Cloth</td>
+            <td>$ 34.99</td>
+        </tr>
+    </table>
+
+    <h3>Order Form</h3>
+    <form method="post" action="https://httpbin.org/post">
+        
+        <p>
+            <label>Customer Name: <input type="text" name="customer_name"></label>
+        </p>
+
+        <p>
+            <label>Mailing Address: <input type="text" name="address"></label>
+        </p>
+
+        <p>
+            <label>City: <input type="text" name="city"></label>
+        </p>
+
+        <p>
+            <label>State: 
+                <select name="state">
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="WI">WI</option>
+                </select>
+            </label>
+        </p>
+
+        <p>Choose a shipping option:</p>
+        <p>
+            <label><input type="radio" name="shipping" value="standard"> Standard shipping (3-4 days)</label><br>
+            <label><input type="radio" name="shipping" value="rush"> Rush shipping (2 days)</label><br>
+            <label><input type="radio" name="shipping" value="overnight"> Overnight shipping (1 day)</label>
+        </p>
+
+        <p>
+            Special delivery instructions?<br>
+            <textarea name="instructions" rows="4" cols="30"></textarea>
+        </p>
+
+        <p>
+            <label>
+                <input type="checkbox" name="mailinglist" checked> E-mail me about future promotions and sales.
+            </label>
+        </p>
+
+        <p>
+            <input type="submit" value="Place Order">
+        </p>
+
+    </form>
+
+</body>
+</html>
